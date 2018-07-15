@@ -1,3 +1,21 @@
-<p>
-  Satyan
-</p>
+<div class="login">
+  <div class="login-triangle"></div>  
+  <form class="login-container" method="post" (ngSubmit)="onSubmitPersonForm(myForm)" #myForm="ngForm">      <div [hidden] = "somes">
+    <p><input type="text" placeholder="username" [(ngModel)]="username" name ="emails" required minlength=5 maxlength=10> </p>
+    <p><input type="password" placeholder="Password" [(ngModel)]="password" name ="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></p>
+    <p><input type="submit" value="Log in" (click)="submit()" [disabled]="!myForm.form.valid"></p>
+    <!-- <p *ngIf =" myForm.form.valid">some</p> -->
+    <p [ngStyle] = "selects()">{{result}}</p>
+    <!-- <p [style.color]="!myForm.form.valid ? 'green' : 'pink'">{{resultz}}</p> -->
+</div>
+  </form>
+</div>
+<!-- <p *ngIf = "myForm.form.valid">{{ myForm.value | json }} </p> -->
+<!-- <div class="login1">
+  <form (ngSubmit)="suns(f)" method = post #f="ngForm">
+    <p><input type="text" name="username" [(ngModel)]= "user" required=""></p>
+    <p><input type="password" name="passwords" [(ngModel)]="pass" required=""></p>
+    <p><input type="submit" name="" value="logs" (click) ="submits()" [disabled]="!f.form.valid"></p>
+    <p>{{results}}</p>
+  </form>
+  </div> -->
