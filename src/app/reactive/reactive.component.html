@@ -1,0 +1,75 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Angular 6 Reactive Form Validation</h3>
+<form (ngSubmit)="reactive()" [formGroup]="myForm1">
+<!-- <form > -->
+	<div class="form-group"> <!-- Full Name -->
+		<label for="full_name_id" class="control-label">First Name</label>
+		<input [style.border-left] = "myForm1.controls.fnameControl.errors?'3px solid red':'3px solid green'" type="text" class="form-control" id="first_name_id" name="first_name" placeholder="John Deer" formControlName="fnameControl" required>
+		<div class="alert alert-danger" [hidden]="!myForm1.controls.fnameControl.errors || myForm1.controls.fnameControl.pristine">
+			first is too short
+		</div>
+	</div>
+
+	<div class="form-group"> <!-- Full Name -->
+		<label for="last_name_id" class="control-label">Last Name</label>
+		<input [style.border-left]="!myForm1.controls.lnameControl.valid ?'3px solid red':'3px solid green'" type="text" class="form-control" id="last_name_id" name="last_name" placeholder="John Deer" formControlName="lnameControl" required>
+			<div class="alert alert-danger" [hidden]='myForm1.controls.lnameControl.pristine || myForm1.controls.lnameControl.valid '>
+		last name is short
+	</div>
+	</div>	
+
+
+	<div class="form-group">
+          <label for="full_name_id" class="control-label">Email</label>
+           <input type="text" placeholder="Email Address" class="form-control" id="email_id" formControlName="emailControl" required >
+           <div [hidden]="!myForm1.controls.emailControl.errors || myForm1.controls.emailControl.pristine " class="alert alert-danger"> 
+  sss
+</div> 
+      </div>
+<div formGroupName ="address">
+	<div class="form-group"> <!-- City-->
+		<label for="city_id" class="control-label">City</label>
+		<input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville" formControlName="city">
+	</div>		
+	<div class="form-group"> <!-- City-->
+		<label for="state_id" class="control-label">State</label>
+		<input type="text" class="form-control" id="state_id" name="state" placeholder="Some state" formControlName="state">
+	</div>									
+						
+	<div class="form-group"> <!-- Zip Code-->
+		<label for="pin_id" class="control-label">pin Code</label>
+		<input type="text" class="form-control" id="pin_id" name="zip" placeholder="#####" 
+		formControlName="pincode">
+	</div>	
+	</div>	
+	<div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="password" formControlName="password">
+  </div>
+<div class="form-group">
+    <label for="pwd">Confirm Password:</label>
+    <input type="password" class="form-control" id="cpwd" name="password" formControlName="confirmPassword">
+    <div class="alert alert-danger" *ngIf="myForm1.controls.confirmPassword.errors?.MatchPassword">Password not match</div>
+ <!--    <div class="alert alert-danger" [hidden]= "myForm1.controls.passwordControl !== myForm1.controls.cpasswordControl">
+    	Password mismatch
+    </div> -->
+  </div>
+
+<!--   <div class="form-group">
+    <label for="cpwd">Confirm Password:</label>
+    <input type="password" class="form-control" id="cpwd" name="conform-password" formControlName="cpassControl">
+ </div> -->
+	
+	<div class="form-group"> <!-- Submit Button -->
+		<button type="submit" [disabled]="!myForm1.valid" class="btn btn-primary">Submit</button>
+		<!-- <button type="submit" (click)="selects()" class="btn btn-primary">Submit</button> -->
+	</div>     
+	
+</form>	
+</div>
+</div>
+</div>
+</div>

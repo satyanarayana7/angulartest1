@@ -1,3 +1,69 @@
-<p>
-  comp2 wojrks!
-</p>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Angular 6 Template-Driven Form Validation</h3>
+<form (ngSubmit)="selects(myForm)" #myForm="ngForm">
+<!-- <form > -->
+	<div class="form-group"> <!-- Full Name -->
+		<label for="full_name_id" class="control-label">First Name</label>
+		<input [style.border-left] = "fname.invalid?'3px solid red':'3px solid green'" type="text" class="form-control" id="first_name_id" name="first_name" placeholder="John Deer" [(ngModel)]="model.fname" #fname="ngModel" minlength="4" required>
+		<!-- 	<div [hidden] = "fname.valid || fname.pristine" class="alert alert-danger">
+		name should have min 4 letters  is required
+	</div>	 -->
+	<div [hidden] = "!fname.errors?.minlength || fname.pristine" class="alert alert-danger">
+		name is too short
+	</div>	
+	</div>
+
+	<div class="form-group"> <!-- Full Name -->
+		<label for="last_name_id" class="control-label">Last Name</label>
+		<input type="text" class="form-control" id="last_name_id" name="last_name" placeholder="John Deer" [(ngModel)]="model.lname" #lname="ngModel" maxlength="12" required>
+	</div>	
+	<div class="form-group">
+          <label for="full_name_id" class="control-label">Email</label>
+           <input [style.border-left] = "email.invalid?'3px solid red':'3px solid green'" id="email_id" name="email" type="text" placeholder="Email Address" class="form-control" id="email_id" [(ngModel)]="model.email" #email="ngModel" pattern='(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))' minlength="8"  required>
+           <div [hidden] = "email.valid || email.pristine" class="alert alert-danger">
+		email is wrong
+	</div>	
+	<!--    <div [hidden] = "!email.errors?.pattern || email.pristine" class="alert alert-danger">
+		email is wrong pattern
+	</div>	 -->
+      </div>
+
+	<div class="form-group"> <!-- City-->
+		<label for="city_id" class="control-label">City</label>
+		<input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville" [(ngModel)]="model.city"  #city="ngModel">
+	</div>		
+	<div class="form-group"> <!-- City-->
+		<label for="state_id" class="control-label">State</label>
+		<input type="text" class="form-control" id="state_id" name="state" placeholder="Some state" [(ngModel)]="model.state" #state="ngModel">
+	</div>									
+						
+	<div class="form-group"> <!-- Zip Code-->
+		<label for="pin_id" class="control-label">pin Code</label>
+		<input type="text" class="form-control" id="pin_id" name="zip" placeholder="#####" [(ngModel)]="model.pincode" #pincode="ngModel">
+	</div>		
+	<div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="password" [(ngModel)]="model.pass" #pass="ngModel">
+  </div>
+
+  <div class="form-group">
+    <label for="cpwd">Confirm Password:</label>
+    <input type="password" class="form-control" id="cpwd" name="confrim-password" [(ngModel)]="model.cpass" #cpass="ngModel">
+     <div [hidden]="model.pass==model.cpass" class="alert alert-danger">
+                     Passwords dont match
+                    </div>
+  </div>
+	
+	<div class="form-group"> <!-- Submit Button -->
+		<button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+		<!-- <button type="submit" (click)="selects()" class="btn btn-primary">Submit</button> -->
+	</div>     
+	
+</form>	
+</div>
+</div>
+</div>
+</div>
