@@ -9,6 +9,7 @@ import {FormGroup,FormControl, Validators,ValidatorFn,FormBuilder,AbstractContro
 export class ReactiveComponent{
   myForm1:FormGroup;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  passpattern = "^([a-zA-Z+]+[0-9+]+[&@!#+]+)$";
   constructor(formBuilder:FormBuilder) { 
   /*this.Rform=new FormGroup({
   fnameControl:new FormControl('',Validators.required),
@@ -26,7 +27,7 @@ export class ReactiveComponent{
       pincode:['',[Validators.required]],
     }),
     emailControl:['',[Validators.required, Validators.pattern(this.emailPattern)]],
-    password:['',Validators.required],
+    password:['',[Validators.required, Validators.pattern(this.passpattern)]],
     confirmPassword:['',Validators.required]     
   },
   , {
@@ -37,6 +38,9 @@ export class ReactiveComponent{
   get emailControl() {
     return this.myForm1.get('emailControl');
 } 
+get password(){
+	return this.myForm1.get('password');
+}
   reactive(){
     console.log( this.myForm1);
     this.myForm1.reset();

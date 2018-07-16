@@ -48,6 +48,9 @@
 	<div class="form-group">
     <label for="pwd">Password:</label>
     <input type="password" class="form-control" id="pwd" name="password" formControlName="password">
+    <div class="alert alert-danger" [hidden]= "!myForm1.controls.password.errors || myForm1.controls.password.pristine ">
+    	Minimum eight characters, at least one letter and one number:
+    </div>
   </div>
 <div class="form-group">
     <label for="pwd">Confirm Password:</label>
