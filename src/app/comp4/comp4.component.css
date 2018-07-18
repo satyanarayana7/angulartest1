@@ -1,0 +1,24 @@
+.some{
+	    width: 120px;
+    height: 120px;
+}
+.logo1{
+	margin-top: 25%;
+	color: #fff !important;
+}
+.btt{
+	text-align: center;
+}
+.body{
+	background-color: #24003f !important;
+	color: #fff !important;
+}
+.lists li {
+	color: #fff !important;
+	border-top: 1px solid #fff !important;
+	border-left: 0px solid #fff !important;
+	border-right: 0px solid #fff !important;
+	border-bottom: 0px solid #fff !important;
+	font-size: 24px;
+	text-align: center;
+}

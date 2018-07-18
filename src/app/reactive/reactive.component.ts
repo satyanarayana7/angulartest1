@@ -30,7 +30,7 @@ export class ReactiveComponent{
     password:['',[Validators.required, Validators.pattern(this.passpattern)]],
     confirmPassword:['',Validators.required]     
   },
-  , {
+  {
       validator: ReactiveComponent.MatchPassword // your validation method
     });
   //   this.model=new Model();

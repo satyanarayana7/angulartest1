@@ -1,0 +1,62 @@
+ <div class="container-fluid" [style.background-color]="'#24003f'">
+        <div class="row">
+            <div class="col-md-6">
+            	<div>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> {{location}}</h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{date | date:'mediumDate'}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{status}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img src={{imagePath}} />,{{deggres}}</h3>
+</div>
+            </div>
+             <div class="col-md-6">
+             <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> Precipitation: {{presc}}</h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">humidity:{{humidity}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> wind:{{wind}}</h3>
+
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md-12">
+            	<div>
+            		 <table class="table table-bordered" [ngStyle] = "{'color':'#000','background-color':'#fff','font-weight':'400' }">
+    <thead>
+    </thead>
+    <tbody>
+    	<tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}">Tuesday</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of tims">{{tim.value}}</td>
+      </tr>
+      <tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}"></td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let cat of groups">{{cat.name}}</td>
+      </tr>
+       <tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}">ForeCast</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let cat of groups">{{cat.name}}</td>
+      </tr>
+       <tr>
+       	<td [ngStyle] = "{'color':'#9c9c9c'}">Temp</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let deg of degs">{{deg.value}}</td>
+      </tr>
+       <tr>
+       	  	<td [ngStyle] = "{'color':'#9c9c9c'}">Realfeel</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let deg of degs1">{{deg.value}}</td>
+      </tr>
+       <tr>
+       	  	<td [ngStyle] = "{'color':'#9c9c9c'}">Wind</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let deg of degs2">{{deg.value}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!--  <table>
+      <ng-template let-group ngFor [ngForOf]="groups">
+      	<tr>
+        <td *ngFor="let row of group.items">{{row}}</td>
+    </tr>
+      </ng-template>
+    </table> -->
+</div>
+            </div>
+            
+        </div>
+    </div>

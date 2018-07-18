@@ -5,5 +5,59 @@
 
 <!-- for template driven forms -->
 <!-- <app-comp2></app-comp2> -->
-<app-reactive></app-reactive>
+<!-- <app-reactive></app-reactive> -->
 
+<!-- attribute directives -->
+<!-- <p [appHighlight]= "'blue'"  [somelight]="'black'" [somelight1]="'violet'" [somelight2]="'white'">Highlight me!</p> -->
+
+<!-- structure directive -->
+<!-- <p>displaying cities</p> 
+<ul>
+<li *ngFor="let cap of array">{{cap.cityname}}</li>
+</ul>
+<p>displaying Countries</p> 
+<ul>
+<li *ngFor="let cap of array">{{cap.countryName}}</li>
+</ul>
+<p>displaying cities with respect to country Name</p> 
+<ul>
+<li *ngFor="let cap of array">{{cap.cityname}} &nbsp; &nbsp; <span *ngIf="cap.countryName =='india'">countryName:&nbsp; india</span> <span *ngIf="cap.countryName =='australia'">countryName:&nbsp; australia</span>
+ <span *ngIf="cap.countryName =='canada'">countryName: &nbsp; canada</span></li>
+</ul>
+<h3>india</h3> 
+<ng-container *ngFor="let cap of array" >
+ <li *ngIf="cap.countryName =='india'">{{ cap.cityname }}</li>
+</ng-container>
+<h3>canada</h3> 
+<ng-container *ngFor="let cap of array" >
+ <li *ngIf="cap.countryName =='canada'">{{ cap.cityname }}</li>
+</ng-container>
+<h3>australia</h3> 
+<ng-container *ngFor="let cap of array" >
+ <li *ngIf="cap.countryName =='australia'">{{ cap.cityname }}</li>
+</ng-container> -->
+<!-- structure directive -->
+<!-- 
+
+<li *ngFor="let cap of array">{{cap.cityname}} &nbsp; &nbsp; <span *ngIf="cap.countryName =='india'">countryName:india</span></li>
+
+<p>displaying Cities in australia</p> 
+<ul>
+<li *ngFor="let cap of array">{{cap.cityname}} &nbsp; &nbsp; <span *ngIf="cap.countryName =='australia'">countryName:australia</span></li>
+</ul>
+<p>displaying Cities in canada</p> 
+<ul>
+<li *ngFor="let cap of array">{{cap.cityname}} &nbsp; &nbsp;
+ <span *ngIf="cap.countryName =='canada'">countryName:canada</span></li>
+</ul>
+ -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+            	<app-comp3></app-comp3>
+            </div>
+            <div class="col-md-8">
+            	<app-comp4></app-comp4>
+            </div>
+        </div>
+    </div>
