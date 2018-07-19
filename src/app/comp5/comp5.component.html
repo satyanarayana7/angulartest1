@@ -1,0 +1,65 @@
+ <div class="container-fluid comp4" [style.background-color]="'#24003f'">
+        <div class="row">
+            <div class="col-md-6">
+            	<div>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> {{location}}</h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{weatherData[0].DateTime | date:'MMMM, h:mm a'}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{weatherData[0].IconPhrase}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img [src]="imgurl+'0'+weatherData[0].WeatherIcon+'-s.png'"></h3>
+</div>
+            </div>
+             <div class="col-md-6">
+             <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> Precipitation: {{weatherData[0].PrecipitationProbability}}</h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">isDayLight: {{weatherData[0].IsDaylight}}</h3>
+   <button (click)= "fetchData()" type="button" class="btn btn-default btn-lg" [ngStyle]= "{'background-color':'#24003f','color':'#fff'}" >
+      <span class="glyphicon glyphicon-plus"></span> Add City
+    </button>
+ <!--    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> wind:{{wind}}</h3> -->
+
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md-12">
+            	<div>
+            		 <table class="table table-bordered" [ngStyle] = "{'color':'#000','background-color':'#fff','font-weight':'400' }">
+    <thead>
+    </thead>
+    <tbody>
+    	<tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}">{{weatherData[0].DateTime | date:'EEEE'}}</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData; let i=index"><p *ngIf= i<7>{{tim.DateTime | date:'HH:MM'}}</p></td>
+      </tr>
+      <tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}"></td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData; let i=index"><p *ngIf= i<7><img [src]="tim.WeatherIcon<10 ?imgurl+'0'+tim.WeatherIcon+'-s.png':imgurl+tim.WeatherIcon+'-s.png'"></p></td>
+      </tr>
+       <tr>
+      	<td [ngStyle] = "{'color':'#9c9c9c'}">ForeCast</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData; let i=index"><p *ngIf= i<7>{{tim.IconPhrase}}</p></td>
+      </tr>
+       <tr>
+       	<td [ngStyle] = "{'color':'#9c9c9c'}">Temp</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData; let i=index"><p *ngIf= i<7>{{tim.Temperature.Value}}{{tim.Temperature.Unit}}</p></td>
+      </tr>
+    <!--    <tr>
+       	  	<td [ngStyle] = "{'color':'#9c9c9c'}">Realfeel</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData">{{deg.value}}</td>
+      </tr> -->
+       <tr>
+       	  	<td [ngStyle] = "{'color':'#9c9c9c'}">isDayLight</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let tim of weatherData; let i=index"> <p *ngIf= i<7>{{weatherData[0].IsDaylight}}</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <!--  <table>
+      <ng-template let-group ngFor [ngForOf]="groups">
+      	<tr>
+        <td *ngFor="let row of group.items">{{row}}</td>
+    </tr>
+      </ng-template>
+    </table> -->
+</div>
+            </div>
+            
+        </div>
+    </div>

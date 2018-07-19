@@ -17,10 +17,11 @@ location:string ="Bangalore,Karnataka";
   constructor() { }
 
    private LOGO = "../../assets/logo.png";
-   private imagePath ="../../assets/cloud.png";
+   private imagePath ="../../assets/cloud1.png";
     tims = [{value:"6pm"},{value:"7pm"},{value:"8pm"},{value:"9pm"},{value:"10pm"}]
      groups = [{name:"cloudy"},{name:"Most cloudy"},{name:"Most cloudy"},{name:"cloudy"},{name:"Most cloudy"}]
      degs = [{value:"26c"},{value:"23c"},{value:"24c"},{value:"25c"},{value:"27c"}]
       degs1 = [{value:"26c"},{value:"23c"},{value:"24c"},{value:"25c"},{value:"27c"}]
        degs2 = [{value:"26SW"},{value:"23NSW"},{value:"24NSW"},{value:"26W"},{value:"27W"}]
+       images =[{path:"../../assets/cloud.png"},{path:"../../assets/cloud.png"},{path:"../../assets/cloud.png"},{path:"../../assets/cloud.png"},{path:"../../assets/cloud.png"}]
 }

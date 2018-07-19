@@ -1,11 +1,11 @@
- <div class="container-fluid" [style.background-color]="'#24003f'">
+ <div class="container-fluid comp4" [style.background-color]="'#24003f'">
         <div class="row">
             <div class="col-md-6">
             	<div>
    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> {{location}}</h3>
    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{date | date:'mediumDate'}}</h3>
     <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{status}}</h3>
-    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img src={{imagePath}} />,{{deggres}}</h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img src={{imagePath}} class="imm"/>,{{deggres}}</h3>
 </div>
             </div>
              <div class="col-md-6">
@@ -28,7 +28,7 @@
       </tr>
       <tr>
       	<td [ngStyle] = "{'color':'#9c9c9c'}"></td>
-        <td [ngStyle] = "{'color':'#000'}" *ngFor="let cat of groups">{{cat.name}}</td>
+        <td [ngStyle] = "{'color':'#000'}" *ngFor="let ims of images"><img src={{ims.path}} class="imm"></td>
       </tr>
        <tr>
       	<td [ngStyle] = "{'color':'#9c9c9c'}">ForeCast</td>
