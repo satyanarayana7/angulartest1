@@ -19,12 +19,17 @@
   </p>
 </div>
 <div class="bttt">
-	<ul class="list-group lists" [style.background-color]="'#24003f'">
-		<li class="list-group-item" *ngFor = "let arr of array" [style.background-color]="'#24003f'">
+  <mat-list role="list" [style.color]="'#fff'">
+  <mat-list-item role="listitem" class="list-group-item" *ngFor = "let arr of array" [style.background-color]="'#24003f'">{{arr.cityname}}</mat-list-item>
+<!--   <mat-list-item role="listitem" >Item 2</mat-list-item>
+  <mat-list-item role="listitem">Item 3</mat-list-item> -->
+</mat-list>
+<!-- 	<ul class="list-group lists" [style.background-color]="'#24003f'">
+		<li >
 			{{arr.cityname}}
 			
 		</li>
-</ul>
+</ul> -->
 
 </div>
             </div>

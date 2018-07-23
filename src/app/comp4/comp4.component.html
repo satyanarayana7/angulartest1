@@ -2,16 +2,16 @@
         <div class="row">
             <div class="col-md-6">
             	<div>
-   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> {{location}}</h3>
-   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{date | date:'mediumDate'}}</h3>
-    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">{{status}}</h3>
-    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img src={{imagePath}} class="imm"/>,{{deggres}}</h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><mat-card-title>{{location}}</mat-card-title> </h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><mat-card-title>{{date | date:'mediumDate'}}</mat-card-title></h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><mat-card-title>{{status}}</mat-card-title></h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"><img src={{imagePath}} class="imm"/>,<mat-card-title>{{deggres}}</mat-card-title></h3>
 </div>
             </div>
              <div class="col-md-6">
-             <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> Precipitation: {{presc}}</h3>
-   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">humidity:{{humidity}}</h3>
-    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> wind:{{wind}}</h3>
+             <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> Precipitation: <mat-card-title>{{presc}}</mat-card-title></h3>
+   <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }">humidity:<mat-card-title>{{humidity}}</mat-card-title></h3>
+    <h3 [ngStyle] = "{'color':'#fff','font-weight':'400' }"> wind:<mat-card-title>{{wind}}</mat-card-title></h3>
 
             </div>
         </div>

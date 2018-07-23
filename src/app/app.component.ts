@@ -9,6 +9,13 @@ import {Service1Service} from './service1.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	text111="Before we proceed to start coding the Input and Output decorators";
+	satya ="satyas";
+	
+	text ="Before we proceed to start coding the Input and Output decorators, let's see how to pass the data to any component.";
+clicking($event){
+	 this.text111;
+}
 // 	@ViewChild(Comp1Component) childcmp:Comp1Component;
 // weatherData:any=[];
 // imgurl= "https://developer.accuweather.com/sites/default/files/";

@@ -14,6 +14,13 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Comp5Component } from './comp5/comp5.component';
 import {Service1Service} from './service1.service';
+import { Pip1Pipe } from './pip1.pipe';
+import { PractiseComponent } from './practise/practise.component';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule,MatCardModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { TableBasicComponent } from './table-basic/table-basic.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +32,28 @@ import {Service1Service} from './service1.service';
     CityDirective,
     Comp3Component,
     Comp4Component,
-    Comp5Component
+    Comp5Component,
+    Pip1Pipe,
+    PractiseComponent,
+    NavComponent,
+    TableBasicComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
    ReactiveFormsModule,
-   HttpClientModule
+   BrowserAnimationsModule,
+   HttpClientModule,
+   LayoutModule,
+   MatToolbarModule,
+   MatCardModule,
+   MatButtonModule,
+   MatSidenavModule,
+   MatIconModule,
+   MatListModule,
+   MatTableModule,
+   MatPaginatorModule,
+   MatSortModule
   ],
   providers: [Service1Service],
   bootstrap: [AppComponent]

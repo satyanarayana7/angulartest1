@@ -54,13 +54,19 @@
 <!-- 
  <p>{{weatherData | json}}</p> -->
 
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
             	<app-comp3></app-comp3>
             </div>
             <div class="col-md-8">
-            	<app-comp5></app-comp5>
+            	<app-comp4></app-comp4>
             </div>
         </div>
-    </div>
+    </div> -->
+  <!--   <app-table-basic></app-table-basic> -->
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav mode="side" opened><app-comp3></app-comp3></mat-sidenav>
+  <mat-sidenav-content><app-comp4></app-comp4></mat-sidenav-content>
+</mat-sidenav-container>
+
